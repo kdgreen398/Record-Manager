@@ -1,0 +1,72 @@
+﻿<Window x:Class="Record_Manager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Record_Manager"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="546" Width="899">
+    <Grid Background="White">
+        <DockPanel LastChildFill="False" Background="White">
+            <Grid Margin="0" DockPanel.Dock="Top" Background="#2B00C8FF">
+                <StackPanel Margin="0">
+                    <StackPanel VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Left" Margin="33,16,0,0">
+                        <Label Content="search" Margin="0" VerticalAlignment="Center" Foreground="Black" FontFamily="Segoe UI Light" MouseEnter="Label_MouseEnter" MouseLeave="Label_MouseLeave" MouseLeftButtonDown="BeginSearch" Padding="15,5" VerticalContentAlignment="Center" HorizontalAlignment="Left" Background="#00000000" BorderBrush="Black" BorderThickness="0.5"/>
+                        <TextBox x:Name="search_box" Margin="7,0,0,0" TextWrapping="Wrap" Foreground="Black" Width="200" BorderBrush="Black" Background="#00000000" FontFamily="Segoe UI Light" VerticalContentAlignment="Center" Padding="10,0,0,0" Height="28" BorderThickness="0,0,0,0.5" CaretBrush="Black"/>
+                        <ComboBox x:Name="boolean_combo" Margin="10,0" SelectedIndex="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="Hidden">
+                            <ComboBoxItem Content="AND"/>
+                            <ComboBoxItem Content="OR"/>
+                        </ComboBox>
+                        <TextBox x:Name="search_box2" Margin="0" TextWrapping="Wrap" Foreground="Black" Width="200" BorderBrush="Black" Background="#00000000" FontFamily="Segoe UI Light" VerticalContentAlignment="Center" Padding="10,0,0,0" Height="28" BorderThickness="0,0,0,0.5" Visibility="Hidden" CaretBrush="Black"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="33,2,0,10">
+                        <Label Content="Search Type:" Margin="0" Padding="5,1" VerticalAlignment="Center" FontFamily="Segoe UI Semilight"/>
+                        <ComboBox x:Name="search_type_combobox" Margin="0" SelectedIndex="0" Width="93" Height="24" DropDownClosed="search_type_combobox_DropDownClosed">
+                            <ComboBox.Background>
+                                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                    <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                                </LinearGradientBrush>
+                            </ComboBox.Background>
+                            <ComboBoxItem Content="Default"/>
+                            <ComboBoxItem Content="Boolean"/>
+                            <ComboBoxItem Cursor="" Content="Wildcard"/>
+                        </ComboBox>
+                        <ComboBox x:Name="search_by_combo" Margin="0" SelectedIndex="0" Width="93" Height="24">
+                            <ComboBoxItem Content="Keyword"/>
+                            <ComboBoxItem Content="Author"/>
+                            <ComboBoxItem Cursor="" Content="Title"/>
+                        </ComboBox>
+                    </StackPanel>
+                </StackPanel>
+                <Label Content="Designed &amp; Coded&#xD;&#xA;by Kaleb Green" HorizontalAlignment="Right" Margin="0,0,30,0" VerticalAlignment="Center" FontFamily="Segoe UI Light" FontSize="14"/>
+            </Grid>
+            <StackPanel Margin="32,0,0,0" Width="622" DockPanel.Dock="Left">
+                <StackPanel Margin="0,0,18.7,0">
+                    <Label x:Name="author_textbox" Content="Load 'source file.txt' to begin" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Black" FontSize="20" Padding="0,5,5,5" FontFamily="Segoe UI Light" Margin="0,15,0,0"/>
+                    <TextBlock x:Name="title_textbox" HorizontalAlignment="Center" Margin="0,0,0,8" TextWrapping="Wrap" Foreground="Black" FontSize="18" VerticalAlignment="Top" FontFamily="Segoe UI Light" TextAlignment="Center"/>
+                    <TextBlock x:Name="abstract_textbox" TextWrapping="Wrap" Foreground="Black" FontFamily="Segoe UI Light" FontSize="16" TextAlignment="Justify" HorizontalAlignment="Center" Margin="0" Padding="5,0,5,10"/>
+                    <StackPanel Orientation="Horizontal" Margin="0" VerticalAlignment="Top" HorizontalAlignment="Center">
+                        <Label x:Name="journal_textbox" Content="" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Foreground="Black" FontFamily="Segoe UI Light" FontStyle="Italic" FontSize="16" Padding="5"/>
+                        <Label x:Name="year_textbox" Content="" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top" Foreground="Black" FontFamily="Segoe UI Light" FontSize="16"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="0,43,15,0" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#00000000" DockPanel.Dock="Right">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0">
+                    <Label Content="&lt;" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" Foreground="Black" FontSize="16" FontFamily="Segoe UI Semibold" MouseEnter="Label_MouseEnter" MouseLeave="Label_MouseLeave" MouseLeftButtonDown="Back" Padding="10,5"/>
+                    <TextBox x:Name="gotoBox" TextWrapping="Wrap" Text="--  of --" Background="#00000000" BorderBrush="{x:Null}" Foreground="Black" FontFamily="Segoe UI Semilight" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="10,0" MouseDoubleClick="ClearTextBox"/>
+                    <Label Content="&gt;" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" Foreground="Black" FontSize="16" FontFamily="Segoe UI Semibold" MouseEnter="Label_MouseEnter" MouseLeave="Label_MouseLeave" MouseLeftButtonDown="Next" Padding="10,5"/>
+                </StackPanel>
+                <Label Content="Go to Record" Margin="0" VerticalAlignment="Center" Foreground="Black" FontSize="16" FontFamily="Segoe UI Light" MouseEnter="Label_MouseEnter" MouseLeave="Label_MouseLeave" MouseLeftButtonDown="GoTo" Padding="15,3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="0.5"/>
+                <Label x:Name="open_file_button" Content="Load Soure File" VerticalAlignment="Center" Foreground="Black" FontSize="16" FontFamily="Segoe UI Light" MouseEnter="Label_MouseEnter" MouseLeave="Label_MouseLeave" MouseLeftButtonDown="OpenFile" Padding="15,3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,10,0,0" BorderBrush="Black" BorderThickness="0.5"/>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0">
+                    <Label Content="&lt;" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" Foreground="Black" FontSize="16" FontFamily="Segoe UI Semibold" MouseEnter="Label_MouseEnter" MouseLeave="Label_MouseLeave" MouseLeftButtonDown="Back" Padding="10,5"/>
+                    <TextBox x:Name="search_result_textbox" TextWrapping="Wrap" Text="--  of --" Background="#00000000" BorderBrush="{x:Null}" Foreground="Black" FontFamily="Segoe UI Semilight" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="10,0"/>
+                    <Label Content="&gt;" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" Foreground="Black" FontSize="16" FontFamily="Segoe UI Semibold" MouseEnter="Label_MouseEnter" MouseLeave="Label_MouseLeave" MouseLeftButtonDown="Next" Padding="10,5"/>
+                </StackPanel>
+            </StackPanel>
+        </DockPanel>
+
+    </Grid>
+</Window>

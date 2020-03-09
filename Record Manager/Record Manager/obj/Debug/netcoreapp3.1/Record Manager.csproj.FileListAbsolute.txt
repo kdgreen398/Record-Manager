@@ -1,0 +1,17 @@
+C:\Users\kdgre\source\repos\Record Manager\Record Manager\obj\Debug\netcoreapp3.1\Record Manager.csprojAssemblyReference.cache
+C:\Users\kdgre\source\repos\Record Manager\Record Manager\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\kdgre\source\repos\Record Manager\Record Manager\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\kdgre\source\repos\Record Manager\Record Manager\obj\Debug\netcoreapp3.1\Record Manager_MarkupCompile.cache
+C:\Users\kdgre\source\repos\Record Manager\Record Manager\obj\Debug\netcoreapp3.1\Record Manager_MarkupCompile.lref
+C:\Users\kdgre\source\repos\Record Manager\Record Manager\bin\Debug\netcoreapp3.1\Record Manager.exe
+C:\Users\kdgre\source\repos\Record Manager\Record Manager\bin\Debug\netcoreapp3.1\Record Manager.deps.json
+C:\Users\kdgre\source\repos\Record Manager\Record Manager\bin\Debug\netcoreapp3.1\Record Manager.runtimeconfig.json
+C:\Users\kdgre\source\repos\Record Manager\Record Manager\bin\Debug\netcoreapp3.1\Record Manager.runtimeconfig.dev.json
+C:\Users\kdgre\source\repos\Record Manager\Record Manager\bin\Debug\netcoreapp3.1\Record Manager.dll
+C:\Users\kdgre\source\repos\Record Manager\Record Manager\bin\Debug\netcoreapp3.1\Record Manager.pdb
+C:\Users\kdgre\source\repos\Record Manager\Record Manager\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\kdgre\source\repos\Record Manager\Record Manager\obj\Debug\netcoreapp3.1\Record Manager.g.resources
+C:\Users\kdgre\source\repos\Record Manager\Record Manager\obj\Debug\netcoreapp3.1\Record Manager.AssemblyInfoInputs.cache
+C:\Users\kdgre\source\repos\Record Manager\Record Manager\obj\Debug\netcoreapp3.1\Record Manager.AssemblyInfo.cs
+C:\Users\kdgre\source\repos\Record Manager\Record Manager\obj\Debug\netcoreapp3.1\Record Manager.dll
+C:\Users\kdgre\source\repos\Record Manager\Record Manager\obj\Debug\netcoreapp3.1\Record Manager.pdb
